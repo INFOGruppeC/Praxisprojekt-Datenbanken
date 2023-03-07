@@ -410,4 +410,8 @@ public class GUI extends JFrame {
     knopfAntwortD.setText(tmp[3]);     
   }
 
+  public static void main(String[] args) {
+    new GUI();
+  }
+
 }
