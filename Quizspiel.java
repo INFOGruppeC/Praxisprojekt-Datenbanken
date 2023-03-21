@@ -65,18 +65,20 @@ public class Quizspiel {
   public Aufgabe gibAufgabe() {
     // Ueberpruefen, ob noch offene Aufgaben in der Pufferliste sind.
     offeneAufgaben.toFirst();
-    if(!offeneAufgaben.hasAccess()){
-      return null;
+    if(offeneAufgaben.hasAccess()){
+      return offeneAufgaben.getContent();
     }
     // SQL-Anweisung: Aufgaben nach Anzahl der Bearbeitungen durch den aktuellen
     // Spieler aufsteigend sortiert abfragen.
+    connector.executeStatement("SELECT * FROM (SELECT * FROM hatBearbeitet" + aktuelleSpielerID + " ORDER BY AnzahlBearbeitungen ASC LIMIT 20) ORDER BY RAND() LIMIT 1;");
 
-    // Die zwanzig am wenigsten durch den aktuellen Spieler bearbeiteten Aufgaben
-    // auslesen.
-
+    QueryResult result = connector.getCurrentQueryResult();
+    String[][] data = result.getData( );
     // Zufallsaufgabe ermitteln.
 
-    return offeneAufgaben.getContent();
+    return new Aufgabe(data[0][0], data[0][1], data[0][2], data[0][3], data[0][4], data[0][5]);
+    
+    //return offeneAufgaben.getContent();
   }
 
   public void abgebenAufgabe(Aufgabe pAufgabe) {
