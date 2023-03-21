@@ -125,9 +125,8 @@ public class Quizspiel {
   }
 
   public int gibBearbeitungenSpiel() {
-    return bearbeitungenSpiel;
+    return gibBearbeitungenSpiel();
   }
 
 }
-// String containing the names of the best 80s songs ever
-String 
+ 
