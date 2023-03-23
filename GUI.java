@@ -218,7 +218,7 @@ public class GUI extends JFrame {
     // Ende Komponenten
 
     //Timer zum Wechseln zu einer neuen Aufgabe. 
-    ausgabenWechsler = new javax.swing.Timer( 2000, new ActionListener() {
+    ausgabenWechsler = new javax.swing.Timer( 500, new ActionListener() {
         public void actionPerformed( ActionEvent e ) {
           //Welchsler bis zur naechsten Verwendung stoppen.
           ausgabenWechsler.stop();
@@ -289,6 +289,7 @@ public class GUI extends JFrame {
     String nachricht = 
     "QUIZSPIEL Version 1.0 \n"+
     "---------------------- \n"+
+    "Lukas stinkt mies nach Fisch. \n"+
     "Beispielprojekt zum Unterrichtsvorhaben Q1 - V (Leistungskurs Informatik) \n"+
     "Lehrplannavigator S II - Informatik (NRW)\n \n"+
     "Qualitäts- und UnterstützungsAgentur - Landesinstitut für Schule (QUA-LiS) \n"+

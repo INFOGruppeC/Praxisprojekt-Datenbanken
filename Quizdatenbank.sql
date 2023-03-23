@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+s-- phpMyAdmin SQL Dump
 -- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `hatBearbeitet` (
   `AnzahlBearbeitungen` int(11) NOT NULL,
   `AnzahlKorrekteBearbeitungen` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
++
 -- --------------------------------------------------------
 
 --
